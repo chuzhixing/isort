@@ -5,7 +5,9 @@
 
 **Important Notice: This script may carry the risk of unintentionally deleting source code content. Please read the following carefully.**
 
-This Python script aims to mimic the functionality of `isort` for sorting `#include` header files in C++ source code files. **However, please be aware that this script is not perfect, and its functionality may contain defects (bugs).**
+This Python script aims to mimic the functionality of `isort` for sorting `#include` header files in C++ source code files.   
+  
+**However, please be aware that this script is not perfect, and its functionality may contain defects (bugs).**
 
 **You are strongly advised to make a complete backup of your C++ source code before using this script.**
 
@@ -13,8 +15,6 @@ This Python script aims to mimic the functionality of `isort` for sorting `#incl
 
 * **Source code content being incorrectly modified or deleted.**
 * **Code compilation failures or unexpected behavior.**
-* **Version control system records being unintentionally altered.**
-* **Any other form of data loss or damage.**
 
 **are solely the responsibility of the user.**
 
