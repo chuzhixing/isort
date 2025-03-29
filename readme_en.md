@@ -15,6 +15,7 @@ This Python script aims to mimic the functionality of `isort` for sorting `#incl
 
 * **Source code content being incorrectly modified or deleted.**
 * **Code compilation failures or unexpected behavior.**
+* **Any other form of data loss or damage.**
 
 **are solely the responsibility of the user.**
 
