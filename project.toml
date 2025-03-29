@@ -1,0 +1,4 @@
+[tool.isort]
+known_other_party = ["windows.h", "stdafx.h"] # 其它库
+known_third_party = ["3rdparty", "argparse", "clipper", "cuda_", "cudnn_", "fastcluster", "<fmt/", '"fmt/', "fmt/format.h", "INIReader.h", "logger.h", "loguru", "NvInfer", "opencv", "pystring", "quickstart_common/", "quickstart_common_trt/", "<util.h>"] # 第三方库
+known_first_party = ["cv_utils", "predictor", "tensorrt_utils.hpp"] # 本项目库
