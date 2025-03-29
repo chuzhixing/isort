@@ -37,7 +37,7 @@ A script that mimics `isort` in Python to sort `#include` header files in C++ so
 
 ```shell
 python -u cpp_isort.py --src my_cpp.cpp --toml project.toml --dst my_cpp_out.cpp --encoding utf-8
-```c++
+```
 
 `project.toml` refers to `pyproject.toml` in Python and can configure which header files are third-party libraries and which are local libraries.
 
@@ -45,11 +45,10 @@ python -u cpp_isort.py --src my_cpp.cpp --toml project.toml --dst my_cpp_out.cpp
 
 Before sorting:
 
-​```c++
+```C++
 #include "yyyy.h"  // isort:skip,top
 #include "xxxx.h"  // isort:skip,top
 #include "aaaa.h"  // isort:skip
-#include "sperm_types.h"
 #include "my_global.h"
 #include "test_visualizer.hpp"
 
@@ -88,7 +87,6 @@ Effect after sorting:
 #include "xxxx.h"  // isort:skip,top
 #include "my_global.h"
 #include "predictor/yolov8_onnx.h"
-#include "sperm_types.h"
 #include "test_visualizer.hpp"
 #include "aaaa.h"  // isort:skip
 ```
@@ -100,11 +98,9 @@ If you do not want certain header files to be sorted within their respective gro
 ```c++
 // isort:skip
 ```
-
 Header files with the `isort:skip` comment within the same group will retain their original order of appearance within that group and will be appended to the end of the respective group. Refer to the `#include "aaaa.h"  // isort:skip` example in the demonstration.
 
 If you do not want certain header files to be sorted within their respective groups and want them to be at the beginning of the respective group, you can add the following comment after the header file:
-
 ```c++
 // isort:skip,top
 ```
