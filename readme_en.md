@@ -125,6 +125,9 @@ The current logic treats any line starting with `#if` and all subsequent code as
 ```
 
 ## Using the Script in VS Code
+Visual Studio Code Tasks can be used to run scripts or launch processes.  
+
+Many existing tools can be run directly within Visual Studio Code through Tasks, without needing to enter commands in the command line separately. Tasks are configured in the tasks.json file located in the .vscode folder.  
 
 You can configure a task in VS Code. On the source code page, `Run Task` will automatically call the local Python script to sort the header files of the code.
 
@@ -158,3 +161,5 @@ You can configure a task in VS Code. On the source code page, `Run Task` will au
     ]
 }
 ```
+## reference
+[1] https://blog.csdn.net/weixin_44814196/article/details/130607664  
