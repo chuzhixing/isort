@@ -1,7 +1,6 @@
 #include "yyyy.h"  // isort:skip,top
 #include "xxxx.h"  // isort:skip,top
 #include "aaaa.h"  // isort:skip
-#include "sperm_types.h"
 #include "my_global.h"
 #include "test_visualizer.hpp"
 
