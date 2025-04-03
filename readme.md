@@ -124,6 +124,9 @@ conditional includes不进行排序，具体说明如下：
 
 ## 在vscode中使用该脚本 
 
+Visual Studio Code 的Task（任务）文件可以被用来运行脚本或启动一个进程。  
+许多现有的工具都可以通过Task直接在Visual Studio Code中运行，而不需要额外在命令行中输入命令。Task被配置在.vscode文件夹的tasks.json文件中。  
+
 可以在vscode中，配置一个task。在源代码的页面，`run task`，会自动调用本地的python脚本对代码的头文件进行排序。
 
 ```json
@@ -157,3 +160,5 @@ conditional includes不进行排序，具体说明如下：
 }
 ```
 
+## 参考文献
+[1] https://blog.csdn.net/weixin_44814196/article/details/130607664  
