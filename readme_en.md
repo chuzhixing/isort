@@ -196,7 +196,7 @@ You can configure a task in VS Code. On the source code page, `Run Task` will au
                 "reveal": "always",
                 "panel": "shared"
             }
-        },
+        }
     ]
 }
 ```

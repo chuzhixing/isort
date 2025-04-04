@@ -194,7 +194,7 @@ Visual Studio Code 的Task（任务）文件可以被用来运行脚本或启动
                 "reveal": "always",
                 "panel": "shared"
             }
-        },
+        }
     ]
 }
 ```
