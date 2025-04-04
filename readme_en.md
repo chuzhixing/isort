@@ -1,6 +1,10 @@
 
 # Tool Description
 
+## Video explanation
+Bilibili video link: https://www.bilibili.com/video/BV1bRZdYdE4i/   
+
+
 ## Disclaimer and Risk Warning
 
 **Important Notice: This script may carry the risk of unintentionally deleting source code content. Please read the following carefully.**
