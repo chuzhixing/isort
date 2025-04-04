@@ -34,9 +34,14 @@
 ## 工具说明
 
 模仿python中的isort，对C++源代码中的头文件进行排序的脚本。排序依据，参与Google C++代码风格。用法如下：
-
+直接使用python脚本用法：
 ```shell
 python -u cpp_isort.py --src my_cpp.cpp --toml project.toml --dst my_cpp_out.cpp --encoding utf-8
+```
+
+或者使用打包好的exe：
+```shell
+cpp_isort.exe --src my_cpp.cpp --toml project.toml --dst my_cpp_out.cpp --encoding utf-8
 ```
 
 project.toml参考python中的pyproject.toml，可以配置哪些头文件是第三方库，哪些头文件是本地库。
@@ -47,6 +52,11 @@ https://github.com/chuzhixing/isort/releases/download/v0.01/cpp_isort.zip
 
 不太方便登录github的，可以在百度网盘中下载：  
 链接: https://pan.baidu.com/s/1-sJJi70yCLuGckCFSl3rxw?pwd=e95e 提取码: e95e  
+
+## 安装说明
+```shell
+pip install -r requirements.txt
+```
 
 ## 效果演示
 

@@ -40,6 +40,11 @@ A script that mimics `isort` in Python to sort `#include` header files in C++ so
 python -u cpp_isort.py --src my_cpp.cpp --toml project.toml --dst my_cpp_out.cpp --encoding utf-8
 ```
 
+Or use the packaged exe:
+```shell
+cpp_isort.exe --src my_cpp.cpp --toml project.toml --dst my_cpp_out.cpp --encoding utf-8
+```
+
 `project.toml` refers to `pyproject.toml` in Python and can configure which header files are third-party libraries and which are local libraries.
 
 ## Download link
@@ -48,6 +53,11 @@ https://github.com/chuzhixing/isort/releases/download/v0.01/cpp_isort.zip
 
 For those who are not very convenient to log in to GitHub, you can download it from Baidu Netdisk:  
 Link: https://pan.baidu.com/s/1-sJJi70yCLuGckCFSl3rxw?pwd=e95e Extract code: e95e  
+
+## Installation instructions
+```shell
+pip install -r requirements.txt
+```
 
 ## Effect Demonstration
 
