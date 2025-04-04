@@ -41,6 +41,13 @@ python -u cpp_isort.py --src my_cpp.cpp --toml project.toml --dst my_cpp_out.cpp
 
 project.toml参考python中的pyproject.toml，可以配置哪些头文件是第三方库，哪些头文件是本地库。
 
+## 下载地址
+我用pyinstaller编译了一个windows 64w位的exe，方便不熟悉python的同行使用。  
+https://github.com/chuzhixing/isort/releases/download/v0.01/cpp_isort.zip  
+
+不太方便登录github的，可以在百度网盘中下载：  
+链接: https://pan.baidu.com/s/1-sJJi70yCLuGckCFSl3rxw?pwd=e95e 提取码: e95e  
+
 ## 效果演示
 
 排序前：  

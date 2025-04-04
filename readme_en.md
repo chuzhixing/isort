@@ -42,6 +42,13 @@ python -u cpp_isort.py --src my_cpp.cpp --toml project.toml --dst my_cpp_out.cpp
 
 `project.toml` refers to `pyproject.toml` in Python and can configure which header files are third-party libraries and which are local libraries.
 
+## Download link
+I compiled a Windows 64w bit exe using pyinstaller, which is convenient for colleagues who are not familiar with Python to use.  
+https://github.com/chuzhixing/isort/releases/download/v0.01/cpp_isort.zip   
+
+For those who are not very convenient to log in to GitHub, you can download it from Baidu Netdisk:  
+Link: https://pan.baidu.com/s/1-sJJi70yCLuGckCFSl3rxw?pwd=e95e Extract code: e95e  
+
 ## Effect Demonstration
 
 Before sorting:
