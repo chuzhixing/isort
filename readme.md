@@ -151,15 +151,37 @@ Visual Studio Code 的Task（任务）文件可以被用来运行脚本或启动
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "Run My Python Script, sort include",
+            "label": "Run My Python Script, sort include by python",
             "type": "shell",
-            "command": "D:\\xxxx\\Users\\Envs\\basic_p38\\Scripts\\python.exe",
+            "command": "D:\\workon\\dev\\Scripts\\python.exe",
             "args": [
-                "D:\\xxxx\\cpp_isort.py",
+                "E:\\PythonWorkspaceSet\\git_or_gitee\\isort\\cpp_isort.py",
                 "--src",
                 "${file}",
                 "--toml",
-                "D:\\xxxx\\project.toml",
+                "E:\\PythonWorkspaceSet\\git_or_gitee\\isort\\project.toml",
+                "--dst",
+                "${file}"
+            ],
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared"
+            }
+        },
+        {
+            "label": "Run My Python Script, sort include by exe",
+            "type": "shell",
+            "command": "E:\\PythonWorkspaceSet\\git_or_gitee\\isort\\dist\\cpp_isort\\cpp_isort.exe",
+            "args": [
+                "--src",
+                "${file}",
+                "--toml",
+                "E:\\PythonWorkspaceSet\\git_or_gitee\\isort\\project.toml",
                 "--dst",
                 "${file}"
             ],
@@ -172,7 +194,7 @@ Visual Studio Code 的Task（任务）文件可以被用来运行脚本或启动
                 "reveal": "always",
                 "panel": "shared"
             }
-        }
+        },
     ]
 }
 ```
