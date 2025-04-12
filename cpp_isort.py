@@ -3,7 +3,6 @@
 """
 import argparse
 import os
-import shutil
 from typing import List
 
 import toml
@@ -78,7 +77,8 @@ def append_headers(sorted_includes: List[str], libraries_headers: List[str],
 
 
 def sort_includes(lines: List[str], known_other_party: List[str],
-                  known_first_party: List[str], known_third_party: List[str]):
+                  known_first_party: List[str], known_third_party: List[str],
+                  input_file: str):
     """对头文件内容，进行排序
     """
     c_system_header_group = [
@@ -101,10 +101,19 @@ def sort_includes(lines: List[str], known_other_party: List[str],
     project_headers = []
     project_headers_skip = []
 
+    main_header = None
+    base_name = os.path.splitext(os.path.basename(input_file))[0]
+    if base_name.endswith('_test'):
+        base_name = base_name[:-5]
+    elif base_name.endswith('_unittest'):
+        base_name = base_name[:-9]
+
     for line in lines:
         line = line.strip()
         if not line.startswith('#include'):
             continue
+        if f'{base_name}.h' in line or f'{base_name}.hpp' in line:
+            main_header = line
 
         is_in_c_system_header = is_in_party(line, c_system_header_group,
                                             c_system_headers)
@@ -150,6 +159,10 @@ def sort_includes(lines: List[str], known_other_party: List[str],
     project_headers.sort()
 
     sorted_includes = []
+    if main_header:
+        sorted_includes.append(main_header)
+        sorted_includes.append('')
+
     if c_system_headers:
         sorted_includes.extend(c_system_headers)
         sorted_includes.append('')
@@ -220,8 +233,8 @@ def sort_include_entry(input_file: str,
             non_include_lines.append(line)
 
     sorted_includes = sort_includes(include_lines, known_other_party,
-                                    known_first_party,
-                                    known_third_party)  # res_list = []
+                                    known_first_party, known_third_party,
+                                    input_file)  # res_list = []
 
     for line in sorted_includes:
         print(line)
