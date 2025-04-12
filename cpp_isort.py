@@ -114,6 +114,7 @@ def sort_includes(lines: List[str], known_other_party: List[str],
             continue
         if f'{base_name}.h' in line or f'{base_name}.hpp' in line:
             main_header = line
+            continue
 
         is_in_c_system_header = is_in_party(line, c_system_header_group,
                                             c_system_headers)
